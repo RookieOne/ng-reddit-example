@@ -14,6 +14,17 @@ h1 {
   color: $white;
   text-align: center;
   font-size: 4em;
+  .reading {
+    opacity: 0;
+    animation: swashIn 1s;
+    animation-fill-mode: forwards;
+  }
+  .reddit {
+    opacity: 0;
+    animation: swashIn 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
 }
 
 #subreddit {
@@ -39,6 +50,7 @@ h1 {
 
 #posts {
   .post {
+    animation: postIn 1s;
     background: $white;
     display: flex;
     border: 1px solid $border-color;
@@ -46,7 +58,80 @@ h1 {
     padding: 0.4em;
     border-radius: 2px;
     img {
-      margin-right: 0.4em;
+      width: 160px;
+      border: 1px solid $border-color;
+      border-radius: 2px;
     }
+    .no-pic {
+      font-size: 5em;
+      padding-top: 0.3em;
+      width: 160px;
+      border: 1px solid $border-color;
+      border-radius: 2px;
+      text-align: center;
+    }
+    .main {
+      margin-left: 1em;
+      font-size: 1.4em;
+      .description {
+        font-size: 0.8em;
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 10em;
+      }
+    }
+    .stats {
+      display: flex;
+    }
+    .upvotes, .comments {
+      padding: 0.2em;
+      text-align: center;
+      margin: 0.2em 1em;
+      .value {
+        display: block;
+        font-size: 2em;
+      }
+      .label {
+        display: block;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+
+
+@keyframes postIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: scale(.2) translate(0%, 200%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transform: scale(1) translate(0%, 0%);
+  }
+}
+
+@keyframes swashIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(-90deg);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(50deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transform: perspective(800px) rotateX(0deg);
   }
 }

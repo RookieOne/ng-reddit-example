@@ -1,10 +1,21 @@
 <div id="posts">
   <div class="post" ng-repeat="post in $ctrl.posts">
-    <img ng-src="{{post.thumbnail}}" />
-    <a class="title" ng-href="{{post.url}}">{{post.title}}</a>
-    <span>{{post.author}}</span>
-    <span>{{post.upVotes}}</span>
-    <span>{{post.numberOfComments}}</span>
-    <div class="description">{{post.description}}</div>
+    <img ng-src="{{post.thumbnail}}" ng-show="post.hasImage" />
+    <i class="no-pic fa fa-file" ng-hide="post.hasImage"></i>
+
+    <div class="main">
+      <a  class="title" ng-href="{{post.url}}">{{post.title}}</a>
+      <span class="author">by {{post.author}}</span>
+      <div class="stats">
+        <div class="upvotes">
+          <span class="value">{{post.upVotes}}</span>
+          <span class="label">votes</span>
+        </div>
+        <div class="comments">
+          <span class="value">{{post.numberOfComments}}</span>
+          <span class="label">comments</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -6,6 +6,7 @@ export default class RedditPost {
   public author: string;
   public upVotes: number;
   public numberOfComments: number;
+  public hasImage: boolean;
 
   constructor(data) {
     this.title = data.title;
@@ -15,5 +16,6 @@ export default class RedditPost {
     this.author = data.author;
     this.upVotes = data.ups;
     this.numberOfComments = data.num_comments;
+    this.hasImage = this.thumbnail != "self";
   }
 }
