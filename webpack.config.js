@@ -2,7 +2,7 @@ var path = require('path')
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.ts'
   },
 
   output: {
@@ -11,7 +11,6 @@ module.exports = {
   },
 
   resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
     extensions: ['', '.ts', '.tsx', '.js', '.css', '.scss']
   },
 
@@ -25,6 +24,10 @@ module.exports = {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
       },
+      {
+        test: /\.html$/,
+        loaders: ['html']
+      }
     ],
   },
 

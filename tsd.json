@@ -10,6 +10,12 @@
     },
     "jquery/jquery.d.ts": {
       "commit": "de82425735f84a10b43921ae4b1d085b3752a626"
+    },
+    "requirejs/require.d.ts": {
+      "commit": "de82425735f84a10b43921ae4b1d085b3752a626"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "de82425735f84a10b43921ae4b1d085b3752a626"
     }
   }
 }
