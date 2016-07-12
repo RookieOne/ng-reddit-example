@@ -4,8 +4,15 @@
   "description": "Working with Angular, Typescript, Webpack, and the Reddit API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot"
   },
   "author": "Jonathan Birkholz @rookieone",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
 }

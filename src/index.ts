@@ -1,0 +1,1 @@
+document.body.innerHTML = "Hello Webpack & Typescript"
