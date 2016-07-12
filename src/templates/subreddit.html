@@ -1,21 +1,20 @@
 <div id="subreddit">
-  <form ng-submit="searchSubReddit()">
-    
-    <input type="text" ng-model="subreddit" />
+  <form ng-submit="$ctrl.searchSubReddit()">
+    <input type="text" ng-model="$ctrl.subreddit" />
   </form>
 
-  <div id="searching-subreddit" class="subreddit-message" ng-show="searching">
+  <div id="searching-subreddit" class="subreddit-message" ng-show="$ctrl.searching">
     <i class="loading fa fa-refresh fa-spin"></i>
-    {{message}}
+    {{$ctrl.message}}
   </div>
 
-  <div id="searched-subreddit" class="subreddit-message" ng-show="searched">
+  <div id="searched-subreddit" class="subreddit-message" ng-show="$ctrl.searched">
     <i class="loading fa fa-check"></i>
-    {{message}}
+    {{$ctrl.message}}
   </div>
 
-  <div id="no-subreddit" class="subreddit-message" ng-show="nosubreddit">
+  <div id="no-subreddit" class="subreddit-message" ng-show="$ctrl.nosubreddit">
     <i class="loading fa fa-remove"></i>
-    {{message}}
+    {{$ctrl.message}}
   </div>
 </div>
