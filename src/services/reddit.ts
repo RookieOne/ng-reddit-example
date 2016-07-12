@@ -5,6 +5,9 @@ class RedditPost {
   public title: string;
   public url: string;
   public description: string;
+  public author: string;
+  public upVotes: number;
+  public numberOfComments: number;
 }
 
 export default class RedditService {
@@ -18,6 +21,9 @@ export default class RedditService {
             url: data.data.url,
             description: data.data.selftext,
             thumbnail: data.data.thumbnail,
+            author: data.data.author,
+            upVotes: data.data.ups,
+            numberOfComments: data.data.num_comments,
           }
         })
       })
