@@ -1,9 +1,9 @@
 var path = require('path')
 
 module.exports = {
-  entry: [
-    './src/index.ts'
-  ],
+  entry: {
+    app: './src/index.ts'
+  },
 
   output: {
       path: __dirname,

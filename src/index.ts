@@ -1,1 +1,3 @@
-document.body.innerHTML = "Hello Webpack & Typescript"
+import * as angular from "angular"
+
+angular.module("ngreddit", []);
