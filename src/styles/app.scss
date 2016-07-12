@@ -27,6 +27,19 @@ h1 {
   }
 }
 
+.button {
+  background: $white;
+  border: 1px solid $border-color;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+
 #subreddit {
   text-align: center;
   .subreddit-message {
@@ -100,7 +113,10 @@ h1 {
   }
 }
 
-
+#post-filters {
+  text-align: center;
+  margin-bottom: 1em;
+}
 
 @keyframes postIn {
   0% {

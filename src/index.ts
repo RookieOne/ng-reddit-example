@@ -4,3 +4,4 @@ import './app';
 import './services/reddit';
 import './components/posts';
 import './components/subreddit';
+import './components/post-filters';
