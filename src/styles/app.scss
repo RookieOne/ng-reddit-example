@@ -1,11 +1,13 @@
 $silver: #bdc3c7;
 $white: #ffffff;
+$black: #333333;
 $light-red: #e74c3c;
 $border-color: #95a5a6;
 
 body {
   font-family: "Montserrat";
   background: $light-red;
+  color: $black;
 }
 
 h1 {
@@ -16,6 +18,16 @@ h1 {
 
 #subreddit {
   text-align: center;
+  .subreddit-message {
+    text-align: center;
+    color: $white;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    i {
+      margin-right: 0.2em;
+    }
+  }
+  
   input[type="text"] {
     font-size: 2em;
     border: 0px solid $white;

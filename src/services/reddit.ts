@@ -8,9 +8,10 @@ class RedditPost {
 }
 
 export default class RedditService {
-  public findPosts($http): Promise<Array<RedditPost>> {
-    return $http.get("http://www.reddit.com/r/pics/search.json?q=kittens&sort=new")
+  public findPosts($http, subreddit): Promise<Array<RedditPost>> {
+    return $http.get(`http://www.reddit.com/r/${subreddit}.json?sort=new`)
       .then((response) => {
+        console.log(response)
         return response.data.data.children.map((data) => {
           return {
             title: data.data.title,

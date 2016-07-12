@@ -1,3 +1,21 @@
-<form id="subreddit">
-  <input type="text" ng-model="subreddit" ng-change="searchSubReddit()" />
-</form>
+<div id="subreddit">
+  <form ng-submit="searchSubReddit()">
+    
+    <input type="text" ng-model="subreddit" />
+  </form>
+
+  <div id="searching-subreddit" class="subreddit-message" ng-show="searching">
+    <i class="loading fa fa-refresh fa-spin"></i>
+    {{message}}
+  </div>
+
+  <div id="searched-subreddit" class="subreddit-message" ng-show="searched">
+    <i class="loading fa fa-check"></i>
+    {{message}}
+  </div>
+
+  <div id="no-subreddit" class="subreddit-message" ng-show="nosubreddit">
+    <i class="loading fa fa-remove"></i>
+    {{message}}
+  </div>
+</div>
