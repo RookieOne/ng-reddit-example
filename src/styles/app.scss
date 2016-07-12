@@ -1,0 +1,29 @@
+$silver: #bdc3c7;
+$white: #ffffff;
+$light-red: #e74c3c;
+$border-color: #95a5a6;
+
+body {
+  font-family: "Montserrat";
+  background: $light-red;
+}
+
+h1 {
+  color: $white;
+  text-align: center;
+  font-size: 4em;
+}
+
+#posts {
+  .post {
+    background: $white;
+    display: flex;
+    border: 1px solid $border-color;
+    margin: 0.2em;
+    padding: 0.4em;
+    border-radius: 2px;
+    img {
+      margin-right: 0.4em;
+    }
+  }
+}
