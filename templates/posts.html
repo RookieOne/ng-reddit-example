@@ -1,1 +1,8 @@
 <h1>{{message}}</h1>
+
+<ul>
+  <li ng-repeat="post in posts">
+    {{post.data.title}}
+    <img ng-src="{{post.data.thumbnail}}" />
+  </li>
+</ul>
