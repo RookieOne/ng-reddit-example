@@ -21,7 +21,7 @@ class SubRedditController {
     this.searching = false;
     this.searched = false;
     this.nosubreddit = false;
-    this.posts = [];
+    this.rootScope.posts = [];
   }
 
   public searchSubReddit() {
