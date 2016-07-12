@@ -1,3 +1,4 @@
-import * as angular from "angular"
-
-angular.module("ngreddit", []);
+import app from './app'
+app.bootstrap();
+import posts from './posts'
+posts();
