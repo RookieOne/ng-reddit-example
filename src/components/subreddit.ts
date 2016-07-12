@@ -1,17 +1,14 @@
 import app from '../app'
-import RedditService from '../services/reddit'
 
 export default app.component('subreddit', {
-  controller: function($scope, $rootScope, $http) {
-    var service = new RedditService()
-
+  controller: function($scope, $rootScope, $http, RedditService) {
     $scope.searchSubReddit = () => {
       $scope.searching = true
       $scope.searched = false
       $scope.nosubreddit = false
 
       $scope.message = `Searching '${$scope.subreddit}' subreddit`
-      service.findPosts($http, $scope.subreddit).then((posts) => {
+      RedditService.findPosts($scope.subreddit).then((posts) => {
         $scope.searching = false
         $scope.searched = true
         $scope.message = `Found '${posts.length}' posts for ${$scope.subreddit} subreddit`
